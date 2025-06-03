@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <link rel="stylesheet" href="../style/work.css">
+</head>
+<body>
+    <header>
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="navigation">
+            <ul>
+                <li><a href="./work.html">Works</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./work-details.html">Work Details</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="works container">
+        <div><h1>Work</h1></div>
+        <div class="works-items">
+            <div class="image">
+                <img src="../photo/Rectangle 30.jpg" alt="Photo">
+            </div>
+            <div class="work-desc">
+                <h2>Designing Dashboards</h2>
+                <div class="year-line">
+                    <p class="year">2020</p>
+                    <p class="text">Dashboard</p>
+                </div>
+                <p class="p">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+
+        <div class="works-items">
+            <div class="image">
+                <img src="../photo/Rectangle 32.jpg" alt="Photo">
+            </div>
+            <div class="work-desc">
+                <h2>Vibrant Portraits of 2018</h2>
+                <div class="year-line">
+                    <p class="year">2018</p>
+                    <p class="text">Illustration</p>
+                </div>
+                <p class="p">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+
+
+        <div class="works-items">
+            <div class="image">
+                <img src="../photo/Rectangle 34.jpg" alt="Photo">
+            </div>
+            <div class="work-desc">
+                <h2>36 Days of Malayalam type</h2>
+                <div class="year-line">
+                    <p class="year">2018</p>
+                    <p class="text">Typography</p>
+                </div>
+                <p class="p">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+
+        <div class="works-items">
+            <div class="image">
+                <img src="../photo/Rectangle 40.jpg" alt="Photo">
+            </div>
+            <div class="work-desc">
+                <h2>3Components</h2>
+                <div class="year-line">
+                    <p class="year">2018</p>
+                    <p class="text">Components, Design</p>
+                </div>
+                <p class="p">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="icons">
+            <img src="../photo/fb.jpg" alt="Facebook Logo">
+            <img src="../photo/insta.jpg" alt="Instagram Logo">
+            <img src="../photo/Group.jpg" alt="Twitter logo">
+            <img src="../photo/Linkedin.jpg" alt="Linkedin logo">
+        </div>
+        <div class="last-text">
+            <h5>Copyright ©2020 All rights reserved</h5>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const nav = document.getElementById('navigation');
+            nav.classList.toggle('active');
+        }
+
+        function downloadResume() {
+            alert('Resume download functionality would be implemented here');
+        }
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navigation').classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            const nav = document.getElementById('navigation');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+    </div>
+</body>
+</html>
